@@ -1,0 +1,45 @@
+<html>
+   <head>
+      <title>VueJs Declarative</title>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+       <script type = "text/javascript" src = "https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+   </head>
+   <body>
+    <div class="container py-5" id="app">
+
+        <h2>Top 10 Price Fish</h2>
+
+        <ul class="list-group">
+
+            <li v-for="(framework,index) of toptenfish"  class="list-group-item d-flex justify-content-between aline-items-center"> {{framework}}
+
+                <span class="badge badge-primary badge-pill">{{prices [index] }}</span>
+                
+            
+
+
+            </li>
+
+
+
+        </ul>
+      
+   </div>
+      <script type = "text/javascript">
+         var app = new Vue({
+            el: '#app',
+            data: {
+                toptenfish:[
+                    "Elish","Roi","katol","Bohal","Magor","koi","pabda","Bohal",
+
+                ],
+                prices:[
+                    900, 800, 700, 600, 500, 400, 500, 600,
+                ]
+            }
+            })
+ 
+      </script>
+   </body>
+</html> 
